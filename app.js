@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 //기본 설정
-var ip = '172.16.3.27';
+var ip = '172.16.6.27';
 var port = 8080;
 
 var db = require('./modules/db.js');
