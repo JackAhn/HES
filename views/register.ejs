@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function checkdata(){
+            var id = document.getElementById('id').value;
+            var pw = document.getElementById('pw').value;
+            var nickname = document.getElementById('nickname').value;
+            var name = document.getElementById('name').value;
+
+            if(id==''||pw==''||nickname==''||name==''){
+                alert('비어 있는 입력란이 존재하는지 확인해 주세요.');
+                return;
+            }
+            var form = document.getElementById('regisform');
+            form.submit();
+        }
+    </script>
+    <form action="/insert" id="regisform" method="post">
+        <h1 class="signUpTitle">Sign up in seconds</h1>
+        <input type="text" name="name" id="name" class="signUpInput" placeholder="name">
+        <input type="text" name="id" id="id" class="signUpInput" placeholder="Type your username">
+        <input type="password" name="pw" id="pw" class="signUpInput" placeholder="Choose a password">
+        <input type="text" name="nickname" id="nickname" class="signUpInput" placeholder="nickname">
+        <input type="button" value="회원가입" onclick="checkdata();">
+     </form>
+</body>
+</html>

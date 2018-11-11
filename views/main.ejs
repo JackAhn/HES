@@ -1,0 +1,87 @@
+<!doctype>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HES</title>
+	<link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+	<header>
+		<div id="head">
+		<a href="/main" id="HWElogo">HES</a>
+		<img src="../images/User_1.png" alt="">
+		<a href="#" class="sub2"><%=nickname%></a>
+		<a href="/" class="sub">로그아웃</a>
+		<a href="/board" class="sub">게시판</a>
+		<a href="#" class="sub">메신저</a>
+		</div>
+	</header>
+	
+	<border>
+	<div id="body">
+		<div id="back_image">
+		<p>Share your Knowledge</p>
+		<p>With HES</p>
+		</div>
+	</div>
+	</border>
+	
+	<footer>
+		<div id="contents">
+			<div class="table">
+			<span>LATEST WRITE</span>
+				<div class="table_in">
+					<table>
+						<tr>
+							<td>No</td>
+							<td width="400">Title</td>
+							<td>Like <img src="../images/%ED%95%98%ED%8A%B8.png" alt="" class="heart"></td>
+						</tr>
+						<%if(contents.length>0){%>
+							<%for(var i=0;i<contents.length;i++){%>
+								<%if(i==9) break;%>
+							<tr>
+								<td class="number"><%=i+1%></td>
+								<td><a href="/view?id=<%=contents[i]._id%>"><%=contents[i].title%></a></td>
+								<td class="cnt"><%=contents[i].good%></td>
+							</tr>
+							<%}%>
+							<%} else {%>
+							<tr>
+								<td colspan="5">게시물이 없습니다.</td>
+							</tr>
+							<%}%>
+					</table>
+				</div>
+			</div>
+			
+			<div class="table">
+			<span>RECORMMENDED WRITE</span>
+				<div class="table_in">
+					<table>
+						<tr>
+							<td>No</td>
+							<td width="400">Title</td>
+							<td>Like <img src="../images/%ED%95%98%ED%8A%B8.png" alt="" class="heart"></td>
+						</tr>
+						<%if(contents2.length>0){%>
+							<%for(var i=0;i<contents2.length;i++){%>
+								<%if(i==9) break;%>
+							<tr>
+								<td class="number"><%=i+1%></td>
+								<td><a href="/view?id=<%=contents2[i]._id%>"><%=contents2[i].title%></a></td>
+								<td class="cnt"><%=contents2[i].good%></td>
+							</tr>
+							<%}%>
+							<%} else {%>
+							<tr>
+								<td colspan="5">게시물이 없습니다.</td>
+							</tr>
+							<%}%>
+					</table>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

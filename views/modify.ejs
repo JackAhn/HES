@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="write_form">
+                <form id="writeAction" action="/readymodify" method="post">
+                    <input type="text" class="inputSubject" id="addContentSubject" name="addContentSubject" placeholder="제목" value="<%=contents[0].title%>">
+                    <input type="text" class="inputWriter" id="addContentWriter" name="addContentWriter" placeholder="작성자" value="<%=nickname%>">
+                    <textarea class="textContents" id="addContents" name="addContents" rows="20" cols="80"><%=contents[0].contents%></textarea>
+                    <div id = "new" class="addBtngroup">
+                        <input type="submit" value="수정"/>
+                        <button onclick="cancelWriteForm('cancel');"><div>CANCEL</div></button>
+                    </div>
+                </form>
+            </div>
+</body>
+</html>

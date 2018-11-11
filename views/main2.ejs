@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="../js/test.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>등록일</th>
+            <th>조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%if(contents.length>0){%>
+                <%for(var i=0;i<contents.length;i++){%>
+                <tr>
+                    <td class="number"><%=i+1%></td>
+                    <td><a href="/view?id=<%=contents[i]._id%>"><%=contents[i].title%></a></td>
+                    <td class="writer"><%=contents[i].nickname%></td>
+                    <% var date = contents[i].date.getFullYear() + "-" + contents[i].date.getMonth() + "-" + contents[i].date.getDate() %>
+                    <td class="date"><%=date%></td>
+                    <td class="cnt"><%=contents[i].count%></td>
+                </tr>
+                <%}%>
+                <%} else {%>
+                <tr>
+                    <td colspan="5">게시물이 없습니다.</td>
+                </tr>
+                <%}%>
+        </tbody>
+    </table>
+    <%
+    for(var i=1;i<=pagination; i++){
+    %>
+    <a href="/main?page=<%=i%>" class="next-page"><%=i%></a>
+    <%}%>
+    <button onclick="writedata();">새 글</button>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Board</title>
+	<link rel="stylesheet" href="../css/board.css">
+</head>
+<body>
+	<header>
+		<div id="head">
+		<a href="/main" id="HWElogo">HES</a>
+		<img src="images/User_1.png" alt="">
+		<a href="#" class="sub2"><%=nickname%></a>
+		<a href="/" class="sub">로그아웃</a>
+		<a href="/board" class="sub">게시판</a>
+		<a href="#" class="sub">메신저</a>
+		</div>
+	</header>
+	<border>
+		<span id="Gae">게시판</span>
+		<div id="container">
+			<div id="list">
+				<div id="list_title">
+					<span>분야</span>
+				</div>
+			</div>
+		
+			<div id="content">
+				<div id="con_head">
+					<span class="head_title">NO</span>
+					<span class="head_title">TITLE</span>
+					<span class="head_title">WRITER</span>
+					<span class="head_title">DATE</span>
+					<span class="head_title">VIEWS</span>
+					<span class="head_title">LIKE</span>
+				</div>
+				<table>
+						<%if(contents.length>0){%>
+							<%for(var i=0;i<contents.length;i++){%>
+								<%if(i==9) break;%>
+							<tr>
+								<td width="10" class="number"><%=i+1%></td>
+								<td width="400"><a href="/view?id=<%=contents[i]._id%>"><%=contents[i].title%></a></td>
+								<td width="55" class="writer"><%=contents[i].nickname%></td>
+								<% var date = contents[i].date.getFullYear() + "-" + contents[i].date.getMonth() + "-" + contents[i].date.getDate() %>
+								<td width="55" class="date"><%=date%></td>
+								<td width="50" class="cnt"><%=contents[i].count%></td>
+								<td width="10" class="like"><%=contents[i].good%></td>
+							</tr>
+							<%}%>
+							<%}%>
+				</table>
+			</div>
+			
+			<footer>
+			<%for(var i=1;i<=pagination; i++){%>
+			<a id="cnt" href="/main?page=<%=i%>" class="next-page"><%=i%></a>
+			<%}%>
+			<a href="/write" id="write">글쓰기 </a>
+			</footer>
+		</div>
+	</border>
+</body>
+</html>

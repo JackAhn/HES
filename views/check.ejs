@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <%
+    if(pass==false){
+%>
+<script type="text/javascript">
+    alert('아이디나 비밀번호를 확인해주세요.');
+    location.href='/';
+</script>
+<%
+    }
+    else if(pass==true){
+%>
+    <script type="text/javascript">
+        alert('<%=data[0].nickname%>님 환영합니다.');
+        location.href='/main?nickname=<%=data[0].nickname%>';
+    </script>
+<%  }
+%>
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>

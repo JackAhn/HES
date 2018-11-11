@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="write_form">
+                <form id="writeAction" action="/submit" method="post">
+                    <input type="text" class="inputSubject" id="addContentSubject" name="addContentSubject" placeholder="제목"><br>
+                    <input type="text" class="inputWriter" id="addContentWriter" name="addContentWriter" placeholder="작성자" value="<%=nickname%>" readonly><br>
+                    <textarea class="textContents" id="addContents" name="addContents" rows="20" cols="80"></textarea><br>
+                    <div id = "new" class="addBtngroup">
+                        <input type="submit" value="등록"/>
+                        <button onclick="location.href='/main'"><div>취소(메인 화면으로 이동)</div></button>
+                    </div>
+                </form>
+            </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="checknickname();">
+        <div class="content_box">
+                <div class="content-title"><%=content.title%></div>
+                <div class="content-info">
+                    <% var date = content.date.getFullYear() + "-" + content.date.getMonth() + "-" + content.date.getDate() %>
+                    <%=date%> / <%=content.nickname%>
+                </div>
+                <div class="content-text">
+                    <%=content.contents%>
+                </div>
+            </div>
+            <input type="text" id="contentval" value="<%=content.nickname%>" style="display:none;"><br>
+            <input type="text" id="loginval" value="<%=ismine%>" style="display:none;"><br>
+            <button id="mdbtn" onclick="location.href='/modify';">수정</button><br>
+            <button id="delbtn" onclick="location.href='/delete';">삭제</button><br>
+            <a href="/main"><div class="content-Btn">메인으로</div></a>
+            <script type="text/javascript">
+                function checknickname(){
+                    var a = document.getElementById('contentval').value;
+                    var b = document.getElementById('loginval').value;
+                    if(a!=b){
+                        document.getElementById('mdbtn').style.display="none";
+                        document.getElementById('delbtn').style.display="none";
+                    }
+                    else{
+                        document.getElementById('mdbtn').style.display="block";
+                        document.getElementById('delbtn').style.display="block";
+                    }
+                }
+            </script>
+</body>
+</html>

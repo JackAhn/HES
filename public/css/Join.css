@@ -1,0 +1,118 @@
+body{
+	background: url(../images/%EB%B0%B0%EA%B2%BD.png);
+}
+
+body>span{
+	color: white;
+	font-size: 40px;
+}
+
+#Board{
+	text-align: center;
+	width: 1000px;
+	height: 800px;
+	background: white;
+	margin: 400px;
+	margin-top: 100px;
+	border-radius: 10px;
+	padding-top: 20px;
+}
+#Board > span:nth-child(1){
+	font-size: 80px;
+}
+
+#x{
+	font-size: 35px;
+	position: relative;
+	left: 390;
+	bottom: 80;
+	color: black;
+	text-decoration: none;
+}
+
+.f{
+	font-size: 40px;
+	padding: 30px;
+}
+
+#id_text > input{
+	text-decoration: none;
+	border: none;
+	border: 2px solid grey;
+	background-color: white;
+	border-radius: 50px;
+	box-shadow: 5px 5px 5px grey;
+	width: 500px;
+	height: 60px;
+	font-size: 40px;
+	margin-top: 50px;
+	margin-right: 130px;
+}
+
+#password_text > input{
+	text-decoration: none;
+	border: none;
+	border: 2px solid grey;
+	background-color: white;
+	border-radius: 50px;
+	box-shadow: 5px 5px 5px grey;
+	width: 500px;
+	height: 60px;
+	font-size: 40px;
+	margin-top: 30px;
+	margin-right: 150px;
+}
+
+#name_text > input{
+	text-decoration: none;
+	border: none;
+	border: 2px solid grey;
+	background-color: white;
+	border-radius: 50px;
+	box-shadow: 5px 5px 5px grey;
+	width: 500px;
+	height: 60px;
+	font-size: 40px;
+	margin-top: 30px;
+	margin-right:190px;
+}
+
+#nicname_text > input{
+	text-decoration: none;
+	border: none;
+	border: 2px solid grey;
+	background-color: white;
+	border-radius: 50px;
+	box-shadow: 5px 5px 5px grey;
+	width: 500px;
+	height: 60px;
+	font-size: 40px;
+	margin-top: 30px;
+	margin-right: 255px;
+}
+
+#email_text > input{
+	text-decoration: none;
+	border: none;
+	border: 2px solid grey;
+	background-color: white;
+	border-radius: 50px;
+	box-shadow: 5px 5px 5px grey;
+	width: 500px;
+	height: 60px;
+	font-size: 40px;
+	margin-top: 30px;
+	margin-right: 185px;
+}
+
+#join{
+	color: white;
+	font-size: 30px;
+	width: 200px;
+    height: 40px;
+    background-color: #ff79a2;
+    position: relative;
+    border-radius: 15px;
+	margin-right: 20px;
+	margin-top: 30px;
+}

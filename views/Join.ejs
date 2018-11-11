@@ -1,0 +1,48 @@
+<!doctpye html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login</title>
+	<link rel="stylesheet" href="../css/Join.css">
+</head>
+<body>
+		<script type="text/javascript">
+			function checkdata(){
+				var id = document.getElementById('id').value;
+				var pw = document.getElementById('password').value;
+				var nickname = document.getElementById('nicname').value;
+				var name = document.getElementById('name').value;
+	
+				if(id==''||pw==''||nickname==''||name==''){
+					alert('비어 있는 입력란이 존재하는지 확인해 주세요.');
+					return;
+				}
+				var form = document.getElementById('regisform');
+				form.submit();
+			}
+		</script>
+	<span>HES</span>
+	<div id="Board">
+		<form action="/insert" id="regisform" method="post">
+		<span>JOIN</span>
+		<a href="/" id="x">x</a>
+		<div id="id_text">
+			<span class="f">ID</span><input type="text" name="id"  id="id">
+		</div>
+		
+		<div id="password_text">
+			<span class="f">PW</span><input type="password" name="pw"  id="password">
+		</div>
+		
+		<div id="name_text">
+			<span class="f">Name</span><input type="text" name="name"  id="name">
+		</div>
+		
+		<div id="nicname_text">
+			<span class="f">Nic Name</span><input type="text" name="nickname"  id="nicname">
+		</div>
+		<button id="join" onclick="checkdata();">JOIN</button>
+		</form>
+	</div>
+</body>
+</html>
